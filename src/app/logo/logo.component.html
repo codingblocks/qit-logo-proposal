@@ -1,0 +1,49 @@
+<svg viewBox="0 0 860 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --secondary-bg-color: white;
+    }
+
+    .secondary-bg-color {
+      fill: white;
+      fill: var(--secondary-bg-color);
+    }
+  </style>
+  <g hidden id="grid">
+    <!-- delete the hidden property to show a simple grid -->
+    <rect x="0" y="0" width="900" height="500" fill="transparent" stroke="grey" stroke-dasharray="2,2"></rect>
+    <path d="M 430 0 L 430 500" stroke="grey" stroke-dasharray="2,2"></path>
+    <path d="M 0 250 L 900 250" stroke="grey" stroke-dasharray="2,2"></path>
+  </g>
+  <g id="headphones">
+    <path d="M 80 280 C 130 -80, 730 -80, 780 280" fill="transparent" stroke="currentColor" stroke-width="14"></path>
+    <path d="M 100 270 C -20 270, -20 460, 100 460 L 100 270 Z" stroke-width="14" stroke="currentColor" fill="currentColor"
+      stroke-linejoin="round"></path>
+    <path d="M 760 270 C 880 270, 880 460, 760 460 L 760 270 Z" stroke-width="14" stroke="currentColor" fill="currentColor"
+      stroke-linejoin="round"></path>
+  </g>
+  <g transform="rotate(-38, 80, 334) translate(80, 334)" id="Q">
+    <rect x="88" y="200" width="24" height="15" stroke="currentColor" stroke-width="2" fill="currentColor"></rect>
+    <circle cx="100" cy="100" r="100" stroke="currentColor" stroke-width="2" fill="currentColor"></circle>
+    <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="2" class="secondary-bg-color"></circle>
+    <path d="M 60 40 C 49 49, 49 49, 40 60 L 50 68 C 58 58, 58 58, 68 50 L 60 40" stroke-width="2" stroke="currentColor"
+      fill="currentColor"></path>
+    <rect x="85" y="210" width="30" height="60" stroke-width="2" stroke="currentColor" fill="currentColor"></rect>
+  </g>
+  <g transform="translate(330, 250)" id="I">
+    <path d="M 70 240 L 130 240 M 100 240 L 100 170 M 50 110 C 50 180, 150 180, 150 110" fill="transparent" stroke="currentColor"
+      stroke-width="12" stroke-linecap="round"></path>
+    <circle cx="100" cy="112" r="40" stroke="none" fill="currentColor"></circle>
+    <circle cx="100" cy="40" r="40" stroke="none" fill="currentColor"></circle>
+    <rect x="60" y="40" height="72" width="80" stroke="none" fill="currentColor"></rect>
+    <rect x="60" y="40" height="8" width="40" class="secondary-bg-color"></rect>
+    <rect x="60" y="56" height="8" width="40" class="secondary-bg-color"></rect>
+    <rect x="60" y="72" height="8" width="40" class="secondary-bg-color"></rect>
+  </g>
+  <g transform="translate(510, 250)" id="T">
+    <path d="M 200 22 L 40 22 C 120 40, 120 60, 120 215" stroke-width="14" stroke="currentColor" fill="transparent"></path>
+    <circle cx="30" cy="22" r="15" stroke-width="14" stroke="currentColor" class="secondary-bg-color"></circle>
+    <circle cx="210" cy="22" r="15" stroke-width="14" stroke="currentColor" class="secondary-bg-color"></circle>
+    <circle cx="120" cy="225" r="15" stroke-width="14" stroke="currentColor" class="secondary-bg-color"></circle>
+  </g>
+</svg>

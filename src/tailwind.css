@@ -1,0 +1,13 @@
+@tailwind preflight;
+
+:root {
+  --background: white;
+  --text: black;
+}
+
+.demo-colors {
+  color: var(--text);
+  background-color: var(--background);
+}
+
+@tailwind utilities;

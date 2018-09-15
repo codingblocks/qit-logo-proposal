@@ -1,27 +1,20 @@
-# QitSvg
+# QIT Logo Proposal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2 and [ng-tailwindcss](https://www.npmjs.com/package/ng-tailwindcss) version 1.1.2.
 
-## Development server
+## To run locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. `npm i -g ng-tailwindcss` if you don't already have it installed.
+2. `npm i` for dependencies.
+3. `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## The Logo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Dave Follett](https://github.com/davefollett) is the mastermind behind the logo design, and the initial code for the svg was put together by [Ben Steward](https://github.com/tehpsalmist).
+This svg logo was coded by hand, so by all means dabble in the code and submit a PR if you think something can be tweaked.
 
-## Build
+_Please note that the `<style>` tag is there on purpose, so anyone who loads the svg on their page can access the secondary background color through the CSS variable with ease. This is primarily to allow the user (dev) to keep the backgrounds unified if they are not white, which may be preferable in some people's opinions. The way this svg is structured, the inner-icon areas couldn't be set to transparent. If you think you can fix this, have at it. I personally think it looks rather cool depending on the color scheme. --Ben_
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## The Main Project
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you're here and you're not sure what's going on, checkout QIT [live](https://qit.cloud) or in the [open source repo](https://github.com/codingblocks/podcast-app) to learn more. Also, join the fun on [Slack](https://www.codingblocks.net/slack/)!
