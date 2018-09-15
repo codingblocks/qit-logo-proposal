@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   text
   bG2
   bG
+  sync: boolean
 
   constructor () { }
 
@@ -38,9 +39,11 @@ export class AppComponent implements OnInit {
   restartBGColorWheel () {
     this.bG = this.getRandomColor()
     document.documentElement.style.setProperty('--background', this.bG)
+    this.sync && document.documentElement.style.setProperty('--secondary-bg-color', this.bG)
     this.bGColorWheel = setInterval(() => {
       this.bG = this.getRandomColor()
       document.documentElement.style.setProperty('--background', this.bG)
+      this.sync && document.documentElement.style.setProperty('--secondary-bg-color', this.bG)
     }, 3000)
   }
 
@@ -65,6 +68,7 @@ export class AppComponent implements OnInit {
 
   changeHandler (prop, event) {
     document.documentElement.style.setProperty(prop, event.target.value)
+    this.sync && prop === '--background' && document.documentElement.style.setProperty('--secondary-bg-color', this.bG)
   }
 
   // https://stackoverflow.com/a/1484514/7872063

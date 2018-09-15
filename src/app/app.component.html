@@ -1,17 +1,21 @@
 <div class="text-center h-screen w-full demo-colors flex flex-col items-center">
   <h1 class="text-indigo mb-4">QIT Logo Proposal</h1>
   <div class="flex flex-wrap justify-center mb-4">
-    <button [ngClass]="bGColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white p-4 mt-2 mr-2"
+    <button type="button" [ngClass]="bGColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white p-4 mt-2 mr-2"
       (click)="bGColorWheel ? stopBGColorWheel() : restartBGColorWheel()">
       {{bGColorWheel ? 'Pause Primary Background' : 'Resume Primary Background'}}
     </button>
-    <button [ngClass]="bG2ColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white p-4 mt-2 mr-2"
+    <button type="button" *ngIf="!sync" [ngClass]="bG2ColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white p-4 mt-2 mr-2"
       (click)="bG2ColorWheel ? stopBG2ColorWheel() : restartBG2ColorWheel()">
       {{bG2ColorWheel ? 'Pause Secondary Background' : 'Resume Secondary Background'}}
     </button>
-    <button [ngClass]="textColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white mt-2 p-4" (click)="textColorWheel ? stopTextColorWheel() : restartTextColorWheel()">
+    <button type="button" [ngClass]="textColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white mt-2 mr-2 p-4"
+      (click)="textColorWheel ? stopTextColorWheel() : restartTextColorWheel()">
       {{textColorWheel ? 'Pause Text' : 'Resume Text'}}
     </button>
+    <button class="rounded float-left bg-indigo text-white mt-2 p-4" type="button" (click)="sync = !sync">{{ sync ?
+      'Unsync
+      Backgrounds' : 'Sync Backgrounds'}}</button>
   </div>
   <div class="w-full max-w-md my-auto">
     <app-logo></app-logo>
@@ -25,7 +29,7 @@
       <label class="mr-2">Primary Background Color</label>
       <input type="color" [(ngModel)]="bG" (change)="changeHandler('--background', $event)">
     </div>
-    <div class="m-3">
+    <div *ngIf="!sync" class="m-3">
       <label class="mr-2">Secondary Background Color</label>
       <input type="color" [(ngModel)]="bG2" (change)="changeHandler('--secondary-bg-color', $event)">
     </div>
