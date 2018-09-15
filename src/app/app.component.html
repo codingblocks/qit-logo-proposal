@@ -1,4 +1,4 @@
-<div class="text-center h-screen w-full demo-colors flex flex-col items-center">
+<div class="text-center w-full demo-colors flex flex-col items-center">
   <h1 class="text-indigo mb-4">QIT Logo Proposal</h1>
   <div class="text-black mb-8 flex flex-wrap justify-center">
     <div class="m-3">
@@ -14,24 +14,25 @@
       <input type="color" [(ngModel)]="bG2" (change)="changeHandler('--secondary-bg-color', $event)">
     </div>
   </div>
-  <div class="w-full max-w-md my-auto">
+  <div class="w-full h-auto max-w-md md:my-12">
     <app-logo></app-logo>
   </div>
   <div class="flex flex-wrap justify-center mb-4">
-    <button type="button" [ngClass]="bGColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white p-4 mt-2 mr-2"
+    <button type="button" [ngClass]="bGColorWheel ? 'bg-red' : 'bg-green'" class="rounded text-white p-4 mt-2 mr-2"
       (click)="bGColorWheel ? stopBGColorWheel() : restartBGColorWheel()">
       {{bGColorWheel ? 'Pause Primary Background' : 'Resume Primary Background'}}
     </button>
-    <button type="button" *ngIf="!sync" [ngClass]="bG2ColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white p-4 mt-2 mr-2"
+    <button type="button" *ngIf="!sync" [ngClass]="bG2ColorWheel ? 'bg-red' : 'bg-green'" class="rounded text-white p-4 mt-2 mr-2"
       (click)="bG2ColorWheel ? stopBG2ColorWheel() : restartBG2ColorWheel()">
       {{bG2ColorWheel ? 'Pause Secondary Background' : 'Resume Secondary Background'}}
     </button>
-    <button type="button" [ngClass]="textColorWheel ? 'bg-red' : 'bg-green'" class="rounded float-left text-white mt-2 mr-2 p-4"
+    <button type="button" [ngClass]="textColorWheel ? 'bg-red' : 'bg-green'" class="rounded text-white mt-2 mr-2 p-4"
       (click)="textColorWheel ? stopTextColorWheel() : restartTextColorWheel()">
       {{textColorWheel ? 'Pause Text' : 'Resume Text'}}
     </button>
-    <button class="rounded float-left bg-indigo text-white mt-2 p-4" type="button" (click)="sync = !sync">{{ sync ?
-      'Unsync
-      Backgrounds' : 'Sync Backgrounds'}}</button>
+    <button class="rounded bg-indigo text-white mt-2 mr-2 p-4" type="button" (click)="sync = !sync">
+      {{ sync ? 'Unsync Backgrounds' : 'Sync Backgrounds'}}
+    </button>
   </div>
+  <a href="https://github.com/codingblocks/qit-logo-proposal" class="rounded bg-green text-white mb-4 p-4">Contribute!</a>
 </div>
