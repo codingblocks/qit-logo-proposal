@@ -30,7 +30,11 @@
       (click)="textColorWheel ? stopTextColorWheel() : restartTextColorWheel()">
       {{textColorWheel ? 'Pause Text' : 'Resume Text'}}
     </button>
-    <button class="rounded bg-indigo text-white mt-2 mr-2 p-4" type="button" (click)="sync = !sync">
+    <button type="button" [ngClass]="!textColorWheel && !bGColorWheel && !bG2ColorWheel ? 'bg-green' : 'bg-red'" class="rounded text-white mt-2 mr-2 p-4"
+      (click)="!textColorWheel && !bGColorWheel && !bG2ColorWheel ? startAll() : pauseAll()">
+      {{!textColorWheel && !bGColorWheel && !bG2ColorWheel ? 'Resume All' : 'Pause All'}}
+    </button>
+    <button class="rounded bg-indigo text-white mt-2 mr-2 p-4" type="button" (click)="sync ? unsyncBackgrounds() : syncBackgrounds()">
       {{ sync ? 'Unsync Backgrounds' : 'Sync Backgrounds'}}
     </button>
   </div>

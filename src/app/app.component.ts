@@ -66,6 +66,29 @@ export class AppComponent implements OnInit {
     this.bG2ColorWheel = null
   }
 
+  syncBackgrounds () {
+    this.sync = true
+    document.documentElement.style.setProperty('--secondary-bg-color', this.bG)
+    this.stopBG2ColorWheel()
+  }
+
+  unsyncBackgrounds () {
+    this.sync = false
+    this.restartBG2ColorWheel()
+  }
+
+  pauseAll () {
+    this.stopBGColorWheel()
+    this.stopBG2ColorWheel()
+    this.stopTextColorWheel()
+  }
+
+  startAll () {
+    this.restartBGColorWheel()
+    !this.sync && this.restartBG2ColorWheel()
+    this.restartTextColorWheel()
+  }
+
   changeHandler (prop, event) {
     document.documentElement.style.setProperty(prop, event.target.value)
     this.sync && prop === '--background' && document.documentElement.style.setProperty('--secondary-bg-color', this.bG)
