@@ -1,4 +1,5 @@
-# QIT Logo Proposal https://qitlogo.now.sh
+# QIT Logo Proposal
+### https://qitlogo.now.sh
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2 and [ng-tailwindcss](https://www.npmjs.com/package/ng-tailwindcss) version 1.1.2.
 
